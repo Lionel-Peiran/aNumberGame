@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据结构：报数游戏</title>
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/UniversalFunction.js"></script>
+    <header>
+        <h1>数据结构：报数游戏</h1>
+        <div class="my_information">by：李培然 1852839</div>
+    </header>
+
+    <section class="mainbox">
+        <div class="column">
+            <div class="menu">
+                <h2>MENU</h2>
+                <br>
+                <a class="choice">请选择排序算法：</a>
+                <br>
+                <div class="input">
+
+
+                </div>
+                <br>
+                <a class="choice">请输入需进行排序的元素：</a>
+                <div class="input">
+                    <textarea id="data" style="resize: none;" cols="46"
+                        placeholder="元素之间请使用空格或换行隔开，仅支持十进制数字，输入数字外的其他字符会导致程序报错。"></textarea>
+                </div>
+                <br>
+                <a class="choice">请选择数据交换的时间间隔：(ms)</a>
+                <div class="input_range">
+                    <input type="range" id="delay" max="2000" min="200" step="200" value="1000"
+                        oninput="document.getElementById('show').innerHTML=value"><span id="show"></span>
+                </div>
+                <br>
+                <div class="button">
+                    <button id="start">Start</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="chart">
+            </div>
+            <div class="message">
+                <p id="data_out">
+                    当前排列情况：1，2，4，8，16，32，64，128，256，512
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="js/Echart.js"></script>
+</body>
+
+</html>
