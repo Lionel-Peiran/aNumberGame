@@ -13,7 +13,7 @@
     <script src="js/flexible.js"></script>
     <script src="js/UniversalFunction.js"></script>
     <header>
-        <h1>数据结构：报数游戏</h1>
+        <h1>数据结构：报数游戏过程模拟</h1>
         <div class="my_information">by：李培然 1852839</div>
     </header>
 
@@ -22,29 +22,32 @@
             <div class="menu">
                 <h2>MENU</h2>
                 <br>
-                <a class="choice">请选择排序算法：</a>
+                <a class="choice">请输入参与游戏的人数：</a>
                 <br>
                 <div class="input">
-
+                    <input id="gamerNumber" type="number" value="4">
 
                 </div>
                 <br>
-                <a class="choice">请输入需进行排序的元素：</a>
-                <div class="input">
-                    <textarea id="data" style="resize: none;" cols="46"
-                        placeholder="元素之间请使用空格或换行隔开，仅支持十进制数字，输入数字外的其他字符会导致程序报错。"></textarea>
-                </div>
-                <br>
-                <a class="choice">请选择数据交换的时间间隔：(ms)</a>
+                <a class="choice">请选择动画的时间间隔：(ms)</a>
                 <div class="input_range">
                     <input type="range" id="delay" max="2000" min="200" step="200" value="1000"
                         oninput="document.getElementById('show').innerHTML=value"><span id="show"></span>
                 </div>
+                <div class="output">
+                    <a class="currentMessage">当前投掷人：</a> <span class="currentMessage" id="current_person"></span>
+                    <br>
+                    <a class="currentMessage">投掷结果：</a><span class="currentMessage" id="current_result"></span>
+                    <br>
+                    <img class="image" src="image/0.png">
+                </div>
                 <br>
                 <div class="button">
-                    <button id="start">Start</button>
+                    <button id="start">点击这里开始模拟游戏过程</button>
                 </div>
-
+                <div class="remark">
+                    注：颜色不代表人物，数据变更时颜色会发生变化，以对比度高显示清楚为原则，人物以他们的编号为准。
+                </div>
             </div>
         </div>
         <div class="column">
@@ -52,7 +55,7 @@
             </div>
             <div class="message">
                 <p id="data_out">
-                    当前排列情况：1，2，4，8，16，32，64，128，256，512
+                    出列顺序：
                 </p>
             </div>
         </div>

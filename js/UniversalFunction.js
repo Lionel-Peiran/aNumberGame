@@ -30,3 +30,16 @@ if (userAgent.indexOf(' electron/') > -1) {
         }
     }
 }
+
+function copyObject(a) {
+    var { ...b } = a;
+    return b;
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function dice() {
+    getRndInteger(0, 6);
+}

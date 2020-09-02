@@ -69,6 +69,12 @@ header .my_information {
   padding-top: 0.2rem;
   font-size: 0.3rem;
 }
+.mainbox .menu .output {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.2rem;
+  font-size: 0.3rem;
+}
 .mainbox .menu .input_range {
   padding-left: 0rem;
   padding-right: 0.25rem;
@@ -80,6 +86,17 @@ header .my_information {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   text-align: center;
+}
+.mainbox .menu .image {
+  width: 4.75rem;
+  height: 4.25rem;
+  padding-left: 0.75rem;
+  padding-top: 0.25rem;
+}
+.mainbox .menu .remark {
+  padding-left: 0.25rem;
+  padding-top: 0.25rem;
+  font-size: 0.2rem;
 }
 .mainbox textarea {
   line-height: 1.5;
