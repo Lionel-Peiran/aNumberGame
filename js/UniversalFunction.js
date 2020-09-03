@@ -32,7 +32,12 @@ if (userAgent.indexOf(' electron/') > -1) {
 }
 
 function copyObject(a) {
-    var { ...b } = a;
+    var b = JSON.parse(JSON.stringify(a));
+    return b;
+}
+
+function copyArray(arr) {
+    var b = [].concat(arr);
     return b;
 }
 
@@ -41,5 +46,6 @@ function getRndInteger(min, max) {
 }
 
 function dice() {
-    getRndInteger(0, 6);
+    return getRndInteger(1, 6);
 }
+

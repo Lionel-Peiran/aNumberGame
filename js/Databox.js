@@ -14,9 +14,9 @@ class Databox {
     get curGamer() {
         return this._curGamer;
     }
-    Init(Gamer) {
+    init(Gamer) {
         this._Number = Gamer;
-        for (var i = 0; i < Gamer; i++) {
+        for (var i = 1; i <= Gamer; i++) {
             this._data.push(i);
         }
     }
@@ -25,8 +25,9 @@ class Databox {
         for (var i = 0; i < diceNumber; i++) {
             order.push((this._curGamer + i) % this._data.length);
         }
-        this._curGamer = (this._curGamer + diceNumber) % this._data.length;
         this._data.splice(order[order.length - 1], 1);
+        this._curGamer = order[order.length - 1] % this._data.length;
         this._Number = this._data.length;
+        return order;
     }
 }
