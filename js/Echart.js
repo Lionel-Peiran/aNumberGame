@@ -89,7 +89,7 @@ class Echart {
         setTimeout(() => {
             document.getElementById("current_person").innerHTML = curGamer;
             console.log(dice);
-            document.getElementById("diceResult").src = "image/1.png";
+            document.getElementById("diceResult").src = "image/" + dice + ".png";
         }, this._delayCount++ * this._delay);
     }
     showOrder(finalOrder) {
@@ -117,7 +117,7 @@ class Echart {
             var order = this._databox.aGround(curDice);
             //console.log(order);
             var pos = this.showARound(order);
-            console.log(option.series[0].data[pos].name);
+            //console.log(option.series[0].data[pos].name);
             finalOrder.push(option.series[0].data[pos].name);
             option.series[0].data.splice(pos, 1);
             this.updateChart(copyObject(option));
