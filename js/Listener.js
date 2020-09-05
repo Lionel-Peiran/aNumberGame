@@ -10,9 +10,16 @@ window.addEventListener("resize", () => {
 document.getElementById("start").onclick = function () {
     var Chart = new Echart();
     var Gamer = document.getElementById('gamerNumber').value;
-    var delay = document.getElementById('delay').value;
-    if (confirm("游戏人数" + Gamer + "，点击确认开始模拟")) {
-        Chart.initChart(Gamer, delay);
-        Chart.startGame();
+    if (Gamer >= 2) {
+        var delay = document.getElementById('delay').value;
+        if (confirm("游戏人数" + Gamer + "，点击确认开始模拟")) {
+            Chart.initChart(Gamer, delay);
+            Chart.startGame();
+        }
     }
+    else {
+        alert("开始游戏的人数至少为2");
+        document.getElementById('gamerNumber').value = 2;
+    }
+
 }
