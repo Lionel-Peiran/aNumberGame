@@ -74,6 +74,9 @@ class Echart {
             option.series[0].data.push(copyObject(obj));
         }
         //检查导入结果
+        document.getElementById("data_out").innerHTML = "出列顺序：";
+        document.getElementById("diceResult").src = "image/0.png";
+
         myChart.setOption(option);
         // console.log(this._databox.data);
         // console.log(this._databox.Number);
